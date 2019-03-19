@@ -1,0 +1,157 @@
+@font-face {
+    font-family: Billabong;
+    src: url(Billabong.ttf);
+}
+
+body {
+    margin: 0;
+    min-width: 1040px;
+    min-height: 100vh;
+    background-color: #fafafa;
+    font-family: Helvetica,Arial,sans-serif;
+    color: #333;
+    display:flex;
+    flex-direction: column;
+}
+
+header {
+    border-bottom: solid 1px #ddd;
+    background-color: white;
+}
+
+div.header {
+    margin: auto;
+    width: 1040px;
+    display: flex;
+    padding: 20px 0 15px 0;
+    color: #333;
+}
+
+h1 {
+    font-family: Billabong;
+    font-weight:100;
+    margin: auto 0 auto 0;
+    font-size: 30px;
+}
+
+nav {
+    margin: auto 0 0 auto;
+}
+
+nav i.material-icons {
+    font-size: 35px;
+    color: #333;
+}
+
+nav a {
+    margin-left: 20px;
+}
+
+nav a:hover i.material-icons {
+    color: #666;
+}
+
+nav div.more {
+	display: inline-block;
+    margin-left: 15px;
+}
+
+nav div.more i.more.material-icons {
+	cursor: pointer;
+}
+
+nav div.more:hover i.more.material-icons {
+	background-color: #ddd;
+	border-radius: 50%;
+}
+
+nav div.more div.relative_menu {
+	position:relative;
+	right: 20px;
+	width: 0;
+	height: 0;
+}
+
+nav div.more div.menu {
+	position: absolute;
+	display: none;
+    background-color: white;
+    border: solid 1px #ddd;
+    border-radius: 3px;
+    padding: 5px 0px 5px 0px;
+}
+
+nav div.more:hover div.menu {
+	display: block;
+}
+
+nav div.more div.menu div.element {
+	padding: 10px 20px 10px 20px;
+	cursor: pointer
+}
+
+nav div.more div.menu div.element:hover {
+	background-color: #eee;
+}
+
+nav div.more div.menu div.element i.material-icons {
+	display: inline;
+	position:relative;
+	top: 2px;
+	margin-right: 3px;
+	font-size: 17px;
+}
+
+div.element + div.element {
+    border-top: solid 1px #ddd;
+}
+
+section {
+    margin: 25px auto auto auto;
+    width: 1000px;
+    flex:1;
+}
+
+article {
+    background-color: white;
+    border: solid 1px #ddd;
+    border-radius: 3px;
+    width: 100%;
+    margin: 25px
+}
+
+article div.user {
+    padding: 15px 20px 15px 20px;
+    border-bottom: solid 1px #ddd;
+}
+
+article div.user div.profile_image {
+    display: inline-block;
+    vertical-align: middle;
+    background-size: cover;
+    background-position: 50% 50%;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    margin-right: 8px;
+}
+
+article div.user span.profile_name {
+    font-weight: 600;
+    font-size: 0.9em;
+}
+
+article div.subbox {
+    padding: 10px 20px 10px 20px;
+}
+
+article div.subbox div.actions i.material-icons {
+    font-size:35px;
+}
+
+footer {
+    color: #aaa;
+    font-size:0.8em;
+    font-weight: 100;
+    padding: 40px 100px 40px 100px;
+}

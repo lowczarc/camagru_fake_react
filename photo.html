@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="style_photo.css" />
+</head>
+<body>
+	<div class="video"><video></video>
+	
+		<div class="center"><div class="white-round"><div class="black-round"><div id="photo_button"></div></div></div></div>
+	</div>
+
+		<script>
+		navigator.getUserMedia = navigator.getUserMedia ||
+		navigator.webkitGetUserMedia ||
+		navigator.mozGetUserMedia;
+
+		if (navigator.getUserMedia) {
+			navigator.getUserMedia({ audio: false, video: { width: { ideal: 1280 } , height: { ideal: 720 } } },
+					function(stream) {
+						var video = document.querySelector('video');
+						video.srcObject = stream;
+						video.onloadedmetadata = function(e) {
+							video.play();
+						};
+					},
+					function(err) {
+						console.log("The following error occurred: " + err.name);
+					}
+					);
+		} else {
+			console.log("getUserMedia not supported");
+		}
+		</script>
+	</body>
+</html>
